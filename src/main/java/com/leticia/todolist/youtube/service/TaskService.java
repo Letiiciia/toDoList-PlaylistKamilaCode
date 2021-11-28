@@ -1,5 +1,6 @@
 package com.leticia.todolist.youtube.service;
 
+import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -14,10 +15,9 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 import java.util.List;
 
 @Service
-@RequiredArgsConstructor
+@AllArgsConstructor
 public class TaskService {
-	
-	@Autowired
+
 	private TaskRepository taskRepository;
 	
 	public Task createTask(Task task) {
