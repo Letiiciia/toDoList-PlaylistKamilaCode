@@ -23,6 +23,8 @@ public class Task {
     @Column(nullable = false)
     private String description;
 
+    @Column(nullable = false)
+    private Date deadLine;
 
     @CreationTimestamp
     @Column(name = "created_at", nullable = false, updatable = false)

@@ -35,5 +35,15 @@ public class TaskController {
 		return taskService.findTaskById(id);
 	}
 
+	@PutMapping("tasks/{id}")
+	public ResponseEntity<Task> updateTaskById(@PathVariable (value = "id") Long id, @RequestBody Task task) {
+		return taskService.updateById(task, id);
+	}
+
+	@DeleteMapping("/tasks/{id}")
+	public ResponseEntity<Object> deleteTaskById(@PathVariable (value = "id") Long id) {
+		return taskService.deleteById(id);
+	}
+
 }
 
